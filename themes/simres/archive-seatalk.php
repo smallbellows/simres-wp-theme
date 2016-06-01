@@ -77,9 +77,6 @@ get_header(); ?>
 						 
 					</div><!-- .entry-content -->
 
-					<footer class="entry-footer">
-						<?php simres_entry_footer(); ?>
-					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
 
 			<?php endwhile;
