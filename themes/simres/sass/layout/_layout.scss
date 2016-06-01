@@ -1,0 +1,20 @@
+.site {
+    max-width: $size__site-main;
+    margin: 0 auto;
+}
+
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-branding {
+
+  height: 40vh;
+  width: 100%;
+  background: url('../simres/images/simres-logo.png') no-repeat center center;
+  background-size: contain;
+
+}

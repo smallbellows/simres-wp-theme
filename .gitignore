@@ -24,6 +24,8 @@ access_log
 !themes/
 !uploads/
 !README.md
+!gulpfile.js
+
 
 # Ignore everything in "plugins" except certain plugins. #
 
