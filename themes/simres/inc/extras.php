@@ -29,19 +29,32 @@ function simres_body_classes( $classes ) {
 add_filter( 'body_class', 'simres_body_classes' );
 
 /**
- * Displays the SeaTalks cpt archive in descending order, and to show all the seatalks for the current year 
+ * Displays the SeaTalks cpt archive in descending order, and to show all the seatalks for the current year
  *
  */
  function simres_change_seatalk_query( $query ) {
-	 
+
 	 $today = getdate();
-	 
+
 	 if ( is_post_type_archive('seatalk')  && !is_admin() && $query->is_main_query() ) {
 		$query->set( 'order', 'ASC' );
 		$query->set( 'posts_per_page', -1 );
 		$query->set('year', $today['year']);
 	}
  }
- 
- 
+
 add_action( 'pre_get_posts', 'simres_change_seatalk_query' );
+
+/**
+ * Change the title displayed on archive pages
+ *
+ */
+
+ function simres_filter_archive_titles() {
+
+	 if( is_post_type_archive( 'seatalk') ) {
+		 return 'seaTalk Schedule';
+	 }
+ }
+
+ add_filter( 'get_the_archive_title', 'simres_filter_archive_titles');
