@@ -16,13 +16,19 @@
 
 	<div class="entry-content">
 		<?php
-			the_content();
+			the_content(); ?>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simres' ),
-				'after'  => '</div>',
-			) );
-		?>
+			<ul>
+		    <?php
+		    global $id;
+		    wp_list_pages( array(
+		        'title_li'    => '',
+		        'child_of'    => $id,
+		      
+		    ) );
+		    ?>
+		</ul>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
