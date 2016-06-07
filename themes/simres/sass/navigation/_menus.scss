@@ -23,6 +23,7 @@
 	}
 
 	a {
+		font-weight: bold;
 		display: block;
 		text-decoration: none;
 	}
@@ -32,6 +33,30 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
+}
+
+.main-navigation {
+
+  @include desktop-query {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 20%;
+
+    ul {
+      padding-top: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    li {
+      flex-basis: calc(1/7 * 100%);
+      padding: 0.25rem $base__space-unit;
+    }
+  }
 }
 
 .comment-navigation,

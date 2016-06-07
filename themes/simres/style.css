@@ -221,8 +221,8 @@ th {
 # Typography
 --------------------------------------------------------------*/
 body,
-button,
 input,
+button,
 select,
 textarea {
   color: #5C5C5C;
@@ -343,8 +343,8 @@ input[type="submit"] {
   background: #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
@@ -406,7 +406,11 @@ select {
   border: 1px solid #ccc; }
 
 textarea {
-  width: 100%; }
+  max-width: 100%; }
+
+span.required {
+  font-weight: bold;
+  color: #111; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -447,8 +451,30 @@ a {
     position: relative;
     text-align: center; }
   .main-navigation a {
+    font-weight: bold;
     display: block;
     text-decoration: none; }
+
+@media screen and (min-width: 970px) {
+  .main-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 20%; }
+    .main-navigation ul {
+      padding-top: 1rem;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: end;
+          -ms-grid-row-align: flex-end;
+          align-items: flex-end; }
+    .main-navigation li {
+      -ms-flex-preferred-size: calc(1/7 * 100%);
+          flex-basis: calc(1/7 * 100%);
+      padding: 0.25rem 1.5em; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -573,12 +599,22 @@ a {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center; }
+  @media screen and (min-width: 970px) {
+    .site-header {
+      position: relative;
+      height: 190px; } }
 
 .site-branding {
   height: 40vh;
   width: 100%;
   background: url("../simres/images/simres-logo.png") no-repeat center center;
   background-size: contain; }
+  @media screen and (min-width: 970px) {
+    .site-branding {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; } }
 
 .content-area {
   padding: 1.5em; }
@@ -586,7 +622,11 @@ a {
 @media screen and (min-width: 660px) {
   .page-template-two-column .entry-content {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
   .page-template-two-column .left-column, .page-template-two-column .right-column {
     width: 50%; } }
 

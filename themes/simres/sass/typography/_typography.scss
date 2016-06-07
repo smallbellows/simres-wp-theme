@@ -1,6 +1,6 @@
 body,
-button,
 input,
+button,
 select,
 textarea {
 	color: $color__text-main;
@@ -8,6 +8,8 @@ textarea {
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
+
+
 
 @import "headings";
 

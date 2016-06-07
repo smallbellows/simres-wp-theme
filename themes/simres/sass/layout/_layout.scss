@@ -11,6 +11,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include desktop-query {
+    position: relative;
+    height: 190px;
+  }
+
 }
 
 .site-branding {
@@ -19,6 +25,13 @@
   width: 100%;
   background: url('../simres/images/simres-logo.png') no-repeat center center;
   background-size: contain;
+
+  @include desktop-query {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
 }
 
@@ -34,12 +47,13 @@
 
     .entry-content {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .left-column, .right-column {
       width: 50%;
     }
-
   }
 }
 
