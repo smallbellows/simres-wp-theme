@@ -26,6 +26,7 @@ get_header(); ?>
 
           <div class="meta">
             <h1><?php echo the_title(); ?></h1>
+            <h2><?php echo $fields['subtitle']; ?></h2>
             <h3 class="featured">Saturna Island, BC</h3>
 
             <h4><?php echo the_date(); ?> <?php echo $fields['time']; ?></h4>
@@ -34,6 +35,15 @@ get_header(); ?>
             <p><?php echo $fields['price']; ?></p>
 
             <!-- loop through cfs loop of pictures -->
+            <?php if (!empty($fields['small_pics'])): ?>
+              <div class="seatalk-pics">
+                <?php $pic_group = $fields['small_pics'];
+                foreach($pic_group as $pic): ?>
+                  <img src="<?php echo $pic['small_photo']; ?>" alt="" />
+                <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
+
           </div>
 
           <div class="content">
