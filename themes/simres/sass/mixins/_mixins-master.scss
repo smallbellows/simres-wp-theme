@@ -22,3 +22,15 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin tablet-query {
+	@media screen and (min-width: $tablet__width) {
+		@content;
+	}
+}
+
+@mixin desktop-query {
+	@media screen and (min-width: $desktop__width) {
+		@content;
+	}
+}

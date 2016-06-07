@@ -1,6 +1,9 @@
+
+
 .site {
     max-width: $size__site-main;
     margin: 0 auto;
+    background: $color__background-main;
 }
 
 
@@ -19,19 +22,41 @@
 
 }
 
+.content-area {
+  padding: $base__space-unit;
+}
+
 // Layout for pages that have a large image on the right side (sideimage.php)
 
 .page-template-sideimage {
 
-  .site-main {
-    display: flex;
-  }
-
-  article {
-    width: 50%;
-  }
-
   .side-image {
-    width: 50%;
+    width: 100%;
+    height: 50vh;
+    overflow-y: hidden;
+
+    img {
+      width: 100%;
+    }
   }
+
+  @include desktop-query {
+    .content-area {
+      padding-right: 0;
+    }
+
+    .site-main {
+      display: flex;
+    }
+
+    article {
+      width: 50%;
+    }
+
+    .side-image {
+      width: 50%;
+      text-align: right;
+    }
+  }
+
 }
