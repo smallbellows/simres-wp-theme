@@ -1,13 +1,14 @@
 <?php
 /**
- * The template for displaying pages with a large image on the right side.
+ * The template for displaying 2-column pages (on small screens, right column will
+ * sit below the left column).
  *
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package simres
  *
- * Template Name: Image on Right Side
+ * Template Name: 2-Column
  */
 
 get_header(); ?>
@@ -24,18 +25,15 @@ get_header(); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
-          <?php
-            the_content(); ?>
 
-            <ul>
-              <?php
-              global $id;
-              wp_list_pages( array(
-                  'title_li'    => '',
-                  'child_of'    => $id
-              ) );
-              ?>
-            </ul>
+          <div class="left-column">
+            <?php echo CFS()->get( 'left_side' ); ?>
+          </div>
+
+          <div class="right-column">
+            <?php echo CFS()->get( 'right_side' ); ?>
+          </div>
+
 
         </div><!-- .entry-content -->
 

@@ -583,6 +583,13 @@ a {
 .content-area {
   padding: 1.5em; }
 
+@media screen and (min-width: 660px) {
+  .page-template-two-column .entry-content {
+    display: -ms-flexbox;
+    display: flex; }
+  .page-template-two-column .left-column, .page-template-two-column .right-column {
+    width: 50%; } }
+
 .page-template-sideimage .side-image {
   width: 100%;
   height: 50vh;

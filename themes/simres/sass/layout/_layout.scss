@@ -26,6 +26,23 @@
   padding: $base__space-unit;
 }
 
+// Two-Column Page Template
+
+.page-template-two-column {
+
+  @include tablet-query {
+
+    .entry-content {
+      display: flex;
+    }
+
+    .left-column, .right-column {
+      width: 50%;
+    }
+
+  }
+}
+
 // Layout for pages that have a large image on the right side (sideimage.php)
 
 .page-template-sideimage {
