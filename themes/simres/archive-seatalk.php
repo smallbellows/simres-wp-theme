@@ -25,19 +25,24 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?>
 
-
+				<?php $fields = CFS()->get(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 
 						<h4> <?php echo date('F j, Y', strtotime(CFS()->get('seatalk_date'))); ?>
-						<?php
-							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
- 						?>
+							<?php if (!empty($fields['header_image'])): ?>
+								<?php
+									the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+								?>
+							<?php else: ?>
+								<?php the_title( '<h2 class="entry-title">', '</h2>'); ?>
+							<?php endif; ?>
+
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
 
-						<?php $fields = CFS()->get(); ?>
+
 
 							<?php if(!empty( $fields['presenter'] )): ?>
 								<p> <?php echo $fields['presenter'] ?>
