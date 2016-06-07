@@ -624,6 +624,49 @@ a {
 .hentry:not(.seatalk) {
   padding: 1.5em; }
 
+.blog-header {
+  background: #565656;
+  height: 110px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: baseline;
+      align-items: baseline; }
+  .blog-header a {
+    color: #ccc;
+    text-decoration: none; }
+  .blog-header .site-branding {
+    background: none;
+    position: relative;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center; }
+    @media screen and (min-width: 970px) {
+      .blog-header .site-branding {
+        width: 30%; } }
+  .blog-header .small-navigation {
+    width: 100%; }
+    @media screen and (min-width: 970px) {
+      .blog-header .small-navigation {
+        width: 70%; } }
+    .blog-header .small-navigation ul.menu {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 100%;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none; }
+    .blog-header .small-navigation li {
+      width: auto;
+      padding: 0.25rem 0.1rem; }
+
 @media screen and (min-width: 660px) {
   .page-template-two-column .entry-content {
     display: -ms-flexbox;

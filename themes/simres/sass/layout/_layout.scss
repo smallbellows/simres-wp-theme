@@ -39,6 +39,60 @@
   padding: $base__space-unit;
 }
 
+// Small Header for Blog Pages
+
+.blog-header {
+
+    background: $color__background-blog;
+
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    a {
+      color: $color__small-nav;
+      text-decoration: none;
+    }
+
+  .site-branding {
+
+    background: none;
+    position: relative;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktop-query {
+      width: 30%;
+    }
+  }
+  .small-navigation {
+
+    width: 100%;
+    @include desktop-query {
+      width: 70%;
+    }
+
+
+    ul.menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+    }
+
+    li {
+      width: auto;
+      padding: 0.25rem 0.1rem;
+    }
+  }
+}
+
 // Two-Column Page Template
 
 .page-template-two-column {
