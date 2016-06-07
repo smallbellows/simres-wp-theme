@@ -18,3 +18,20 @@
   background-size: contain;
 
 }
+
+// Layout for pages that have a large image on the right side (sideimage.php)
+
+.page-template-sideimage {
+
+  .site-main {
+    display: flex;
+  }
+
+  article {
+    width: 50%;
+  }
+
+  .side-image {
+    width: 50%;
+  }
+}

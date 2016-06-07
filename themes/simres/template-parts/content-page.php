@@ -23,8 +23,7 @@
 		    global $id;
 		    wp_list_pages( array(
 		        'title_li'    => '',
-		        'child_of'    => $id,
-		      
+		        'child_of'    => $id
 		    ) );
 		    ?>
 		</ul>
