@@ -26,3 +26,29 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+// Sea Talk Pages
+
+.seatalk-content{
+
+	padding: $base__space-unit;
+
+	.meta {
+		text-align: center;
+	}
+
+	@include desktop-query {
+
+		display: flex;
+		justify-content: space-between;
+
+		.meta, .content {
+			width: 49%;
+		}
+
+		.meta {
+			text-align: left;
+			
+		}
+	}
+}
