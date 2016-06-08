@@ -58,3 +58,18 @@ add_action( 'pre_get_posts', 'simres_change_seatalk_query' );
  }
 
  add_filter( 'get_the_archive_title', 'simres_filter_archive_titles');
+
+ function simres_seatalk_highlight_css() {
+
+	 if ( !is_singular('seatalk') ) {
+		 return;
+	 }
+
+	 $highlight_color = CFS()->get('highlight_color');
+
+	 $custom_css = ".featured { color: $highlight_color; }";
+
+	 wp_add_inline_style( 'simres-style', $custom_css );
+ }
+
+ add_action( 'wp_enqueue_scripts', 'simres_seatalk_highlight_css' );
