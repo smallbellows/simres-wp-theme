@@ -429,6 +429,22 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+ul.related {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.related li {
+  display: inline-block;
+  padding: 0.5rem;
+  line-heigh: 0.5rem;
+  max-width: 90%;
+  background: #C9E8F2;
+  margin: 0.1rem 0; }
+
+.related a {
+  text-decoration: none; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -746,6 +762,28 @@ a {
         width: 49%; }
       .seatalk-content .meta {
         text-align: left; } }
+
+@media screen and (min-width: 970px) {
+  .single-format-standard .site-main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
+
+@media screen and (min-width: 970px) {
+  article.format-standard, aside.format-standard {
+    width: 49%; } }
+
+@media screen and (min-width: 970px) {
+  aside.format-standard {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 .directors {
   display: -ms-flexbox;

@@ -16,7 +16,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php simres_posted_on(); ?>
+			<p><?php echo get_the_date(); ?></p>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -39,7 +39,7 @@
 
 </article><!-- #post-## -->
 
-<aside>
+<aside <?php post_class(); ?>>
   <?php $images = CFS()->get('sidebar_images');
       foreach( $images as $image): ?>
       <img src="<?php echo $image['picture']; ?>" alt="" />

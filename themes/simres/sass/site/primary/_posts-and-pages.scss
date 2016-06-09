@@ -48,7 +48,37 @@
 
 		.meta {
 			text-align: left;
-			
+
 		}
 	}
+}
+
+// Standard Blog Pages
+
+
+.single-format-standard .site-main {
+
+
+	@include desktop-query {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+article.format-standard, aside.format-standard {
+
+	@include desktop-query {
+		width: 49%;
+	}
+}
+
+aside.format-standard {
+
+	@include desktop-query {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 }

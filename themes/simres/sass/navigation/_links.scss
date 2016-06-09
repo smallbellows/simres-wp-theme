@@ -1,6 +1,7 @@
 a {
 	color: $color__link;
 
+
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -16,4 +17,23 @@ a {
 	&:active {
 		outline: 0;
 	}
+}
+
+ul.related {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.related li {
+	display: inline-block;
+	padding: 0.5rem;
+	line-heigh: 0.5rem;
+	max-width: 90%;
+	background: #C9E8F2;
+	margin: 0.1rem 0;
+}
+
+.related a {
+	text-decoration: none;
 }
