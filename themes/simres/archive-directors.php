@@ -17,13 +17,13 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					post_type_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
+				<p>The directors of SIMRES are residents of Saturna Island with a broad variety of interests and life experiences. Each, in their own way, brings a different personality and perspective to the organization. Click on a photo to learn more about our directors.</p>
 			</header><!-- .page-header -->
 
 
       <div class="directors">
-
 
 			<?php
 			/* Start the Loop */

@@ -29,7 +29,7 @@ function simres_body_classes( $classes ) {
 add_filter( 'body_class', 'simres_body_classes' );
 
 /**
- * Displays the SeaTalks cpt archive in descending order, and to show all the seatalks for the current year
+ * Displays the SeaTalks cpt archive in ascending order, and to show all the seatalks for the current year
  *
  */
  function simres_change_seatalk_query( $query ) {
@@ -44,6 +44,22 @@ add_filter( 'body_class', 'simres_body_classes' );
  }
 
 add_action( 'pre_get_posts', 'simres_change_seatalk_query' );
+
+
+/**
+ * Display Director posts in ascending order
+ *
+ */
+
+ function simres_director_query( $query ) {
+
+		 if ( is_post_type_archive('directors')  && !is_admin() && $query->is_main_query() ) {
+			 $query->set( 'order', 'ASC' );
+		 }
+
+ }
+
+ add_action( 'pre_get_posts', 'simres_director_query' );
 
 /**
  * Change the title displayed on archive pages
