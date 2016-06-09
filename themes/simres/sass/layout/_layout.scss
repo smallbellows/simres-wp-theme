@@ -130,6 +130,10 @@
     height: 50vh;
     overflow-y: hidden;
 
+    @include desktop-query {
+      height: 100%;
+    }
+
     img {
       width: 100%;
     }

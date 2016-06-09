@@ -56,8 +56,11 @@
 // Standard Blog Pages
 
 
-.single-format-standard .site-main {
-
+.single-standard-header {
+	width: 100%;
+	height: auto;
+}
+.main-single-standard {
 
 	@include desktop-query {
 		display: flex;
