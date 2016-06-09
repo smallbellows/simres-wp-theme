@@ -59,13 +59,13 @@ function simres_seatalk_cpt() {
 }
 add_action( 'init', 'simres_seatalk_cpt', 0 );
 
-// Register Directors CPT 
+// Register Directors CPT
 // Register Custom Post Type
 function simres_directors_cpt() {
 
 	$labels = array(
 		'name'                  => 'Directors',
-		'singular_name'         => 'director',
+		'singular_name'         => 'Director',
 		'menu_name'             => 'Directors',
 		'name_admin_bar'        => 'Director',
 		'archives'              => 'Director Archives',
