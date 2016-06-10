@@ -729,6 +729,20 @@ ul.related {
     width: 50%;
     text-align: right; } }
 
+.blog-archive {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.blog-archive article {
+  -ms-flex: 0 1 25%;
+      flex: 0 1 25%; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

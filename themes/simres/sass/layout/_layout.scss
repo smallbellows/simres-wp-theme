@@ -159,3 +159,17 @@
   }
 
 }
+
+//layout for blog archive page
+
+.blog-archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+
+.blog-archive article {
+  flex: 0 1 25%;
+}
