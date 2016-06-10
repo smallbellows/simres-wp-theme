@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying pages with a large image on the right side.
+ * The template for displaying pages that have a list of images to use as a slideshow.
  *
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package simres
  *
- * Template Name: Image on Right Side
+ * Template Name: Parent Page with Slideshow
  */
 
 get_header(); ?>
@@ -18,7 +18,17 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 
+			<?php if(CFS()->get('images')): ?>
+				<ul class="slideshow">
+					<?php $slides = CFS()->get('images');
+								foreach($slides as $slide):?>
+							<li><img src="<?php echo $slide['slide']; ?>" alt="" /></li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
+
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
         <header class="entry-header">
           <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header><!-- .entry-header -->
@@ -38,6 +48,16 @@ get_header(); ?>
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
+
+					<ul>
+						<?php
+						global $id;
+						wp_list_pages( array(
+								'title_li'    => '',
+								'child_of'    => $id
+						) );
+						?>
+					</ul>
           <?php
             edit_post_link(
               sprintf(

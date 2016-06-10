@@ -432,7 +432,11 @@ a {
 ul.related {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
 
 .related li {
   display: inline-block;
@@ -999,3 +1003,14 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+## Slideshow
+--------------------------------------------------------------*/
+.slideshow {
+  max-height: 307px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff; }

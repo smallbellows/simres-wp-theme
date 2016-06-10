@@ -23,3 +23,17 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 @import "galleries";
+
+
+/*--------------------------------------------------------------
+## Slideshow
+--------------------------------------------------------------*/
+
+.slideshow {
+	max-height: 307px;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+}
