@@ -104,4 +104,11 @@ ul.related-pages {
 		display: inline-block;
 		margin: $base__space-unit;
 	}
+
+	h3 {
+		text-transform: uppercase;
+		font-weight: normal;
+		@include font-size(1);
+		max-width: 150px;
+	}
 }

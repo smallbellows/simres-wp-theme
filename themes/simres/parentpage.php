@@ -50,6 +50,8 @@ get_header(); ?>
         <footer class="entry-footer">
 
 					<ul class="related-pages">
+
+						<!-- Start Loop of Related Pages -->
 						<?php
 						global $id;
 
@@ -60,11 +62,11 @@ get_header(); ?>
 							<?php if(has_post_thumbnail($page->ID)): ?>
 								<a href="<?php echo get_permalink($page->ID) ?>">
 									<?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
-									<p><?php echo $page->post_title ?></p>
+									<h3><?php echo $page->post_title ?></h3>
 								</a>
 							<?php endif; ?>
 						</li>
-					<?php endforeach;?>
+					<?php endforeach; wp_reset_postdata();?>
 					</ul>
           <?php
             edit_post_link(
