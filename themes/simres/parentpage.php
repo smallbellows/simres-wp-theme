@@ -30,7 +30,7 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php the_title( '<h1 class="entry-title parent-page">', '</h1>' ); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -49,14 +49,22 @@ get_header(); ?>
 
         <footer class="entry-footer">
 
-					<ul>
+					<ul class="related-pages">
 						<?php
 						global $id;
-						wp_list_pages( array(
-								'title_li'    => '',
-								'child_of'    => $id
-						) );
-						?>
+
+						$args = array( 'child_of' => $id, 'post_type' => 'page');
+						$related_pages = get_pages($args);
+						foreach($related_pages as $page): ?>
+						<li>
+							<?php if(has_post_thumbnail($page->ID)): ?>
+								<a href="<?php echo get_permalink($page->ID) ?>">
+									<?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+									<p><?php echo $page->post_title ?></p>
+								</a>
+							<?php endif; ?>
+						</li>
+					<?php endforeach;?>
 					</ul>
           <?php
             edit_post_link(

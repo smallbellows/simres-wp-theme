@@ -22,3 +22,11 @@ h5 {
 h6 {
 	@include font-size(1.05);
 }
+
+h1.parent-page {
+	font-family: 'Lato';
+	text-transform: lowercase;
+	font-weight: normal;
+	@include font-size(4);
+
+}

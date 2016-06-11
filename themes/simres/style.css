@@ -42,6 +42,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Lato';
+  src: url("./fonts/lato-thin-webfont.eot");
+  src: url("./fonts/lato-thin-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/lato-thin-webfont.woff2") format("woff2"), url("./fonts/lato-thin-webfont.woff") format("woff"), url("./fonts/lato-thin-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -257,6 +264,13 @@ h5 {
 h6 {
   font-size: 16.8px;
   font-size: 1.05rem; }
+
+h1.parent-page {
+  font-family: 'Lato';
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: 64px;
+  font-size: 4rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -858,6 +872,21 @@ ul.related {
         flex-direction: column;
     -ms-flex-pack: justify;
         justify-content: space-between; } }
+
+h1.parent-page {
+  text-align: center; }
+
+ul.related-pages {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  ul.related-pages li {
+    display: inline-block;
+    margin: 1.5em; }
 
 .directors {
   display: -ms-flexbox;

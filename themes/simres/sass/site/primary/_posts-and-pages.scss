@@ -86,3 +86,22 @@ aside.format-standard {
 	}
 
 }
+
+// Parent Pages that link to Related Sub page-links
+
+h1.parent-page {
+	text-align: center;
+}
+
+ul.related-pages {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+		display: inline-block;
+		margin: $base__space-unit;
+	}
+}
