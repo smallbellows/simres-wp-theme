@@ -162,14 +162,42 @@
 
 //layout for blog archive page
 
+.blog {
+  header.hero {
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+    url(./images/archive-header.jpg) no-repeat center center;
+    background-size: cover;
+    height: 54vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      padding-left: 2rem;
+      padding-bottom: 10rem;
+    }
+  }
+}
+
 .blog-archive {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
+  padding: $base__space-unit;
 
 }
 
-.blog-archive article {
+.blog-archive div.hentry {
   flex: 0 1 25%;
+  border: $border__main;
+  border-top-width: 5px;
+  padding: 0.5rem;
+}
+
+.blog-archive .entry-content {
+  height: 90px;
+  width: 225px;
+  overflow: hidden;
 }

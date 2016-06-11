@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 
@@ -29,4 +29,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-</article><!-- #post-## -->
+</div><!-- #post-## -->

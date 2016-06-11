@@ -234,6 +234,30 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 18.4px;
+  font-size: 1.15rem; }
+
+h6 {
+  font-size: 16.8px;
+  font-size: 1.05rem; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -419,7 +443,8 @@ span.required {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #161616; }
+  color: #161616;
+  text-decoration: none; }
   a:visited {
     color: #424242; }
   a:hover, a:focus, a:active {
@@ -729,6 +754,21 @@ ul.related {
     width: 50%;
     text-align: right; } }
 
+.blog header.hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./images/archive-header.jpg) no-repeat center center;
+  background-size: cover;
+  height: 54vh;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .blog header.hero h1 {
+    padding-left: 2rem;
+    padding-bottom: 10rem; }
+
 .blog-archive {
   display: -ms-flexbox;
   display: flex;
@@ -737,11 +777,20 @@ ul.related {
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+  padding: 1.5em; }
 
-.blog-archive article {
+.blog-archive div.hentry {
   -ms-flex: 0 1 25%;
-      flex: 0 1 25%; }
+      flex: 0 1 25%;
+  border: 1px solid #EAEAEA;
+  border-top-width: 5px;
+  padding: 0.5rem; }
+
+.blog-archive .entry-content {
+  height: 90px;
+  width: 225px;
+  overflow: hidden; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
