@@ -507,6 +507,7 @@ ul.related {
   .main-navigation li {
     -ms-flex: 0 1 100px;
         flex: 0 1 100px;
+    padding: 0.5rem 1.5em;
     position: relative;
     text-align: center; }
   .main-navigation a {
@@ -537,8 +538,7 @@ ul.related {
       padding-bottom: 1.5rem; }
     .main-navigation li {
       -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-      padding: 0.5rem 1.5em; } }
+          flex-basis: auto; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -669,12 +669,13 @@ ul.related {
       height: 305px; } }
 
 .site-branding {
-  height: 40vh;
+  height: 20vh;
   width: 100%;
   background: url("../simres/images/simres-logo.png") no-repeat center center;
   background-size: contain; }
   @media screen and (min-width: 970px) {
     .site-branding {
+      height: 40vh;
       width: 100%;
       position: absolute;
       top: 0;
@@ -682,6 +683,9 @@ ul.related {
 
 .hentry:not(.seatalk) {
   padding: 1.5em; }
+
+.home section {
+  margin: 1.5em; }
 
 .blog-header {
   background: #565656;
@@ -733,7 +737,7 @@ ul.related {
       list-style: none; }
     .blog-header .small-navigation li {
       width: auto;
-      padding: 0.25rem 0.2rem; }
+      padding: 0.5rem 0.4rem; }
 
 @media screen and (min-width: 660px) {
   .page-template-two-column .entry-content {
@@ -886,7 +890,17 @@ ul.related-pages {
       flex-wrap: wrap; }
   ul.related-pages li {
     display: inline-block;
-    margin: 1.5em; }
+    margin: 0.2rem 1.5em; }
+  ul.related-pages li.loop-title {
+    width: 50%;
+    height: 20vh;
+    background: url(./images/arrow.png) no-repeat 0% 100%; }
+    @media screen and (min-width: 660px) {
+      ul.related-pages li.loop-title {
+        width: 15%;
+        height: 17vh; } }
+  ul.related-pages h2 {
+    font-weight: normal; }
   ul.related-pages h3 {
     text-transform: uppercase;
     font-weight: normal;
@@ -905,8 +919,8 @@ ul.related-pages {
 .director-photo {
   padding: 0;
   margin: 0;
-  line-height: 0;
-  width: 50%; }
+  width: 50%;
+  line-height: 0; }
 
 .lightbox-target {
   position: fixed;
@@ -942,7 +956,8 @@ ul.related-pages {
   background: rgba(204, 204, 204, 0.8);
   color: black;
   z-index: 10;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  line-height: normal; }
 
 .caption h2, .caption p {
   padding: 0 1%;

@@ -21,12 +21,14 @@
 
 .site-branding {
 
-  height: 40vh;
+
+  height: 20vh;
   width: 100%;
   background: url('../simres/images/simres-logo.png') no-repeat center center;
   background-size: contain;
 
   @include desktop-query {
+    height: 40vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -37,6 +39,12 @@
 
 .hentry:not(.seatalk){
   padding: $base__space-unit;
+}
+
+// Home page
+
+.home section {
+  margin: $base__space-unit;
 }
 
 // Small Header for Blog Pages
@@ -98,7 +106,7 @@
 
     li {
       width: auto;
-      padding: 0.25rem 0.2rem;
+      padding: 0.5rem 0.4rem;
     }
   }
 }

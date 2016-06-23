@@ -100,11 +100,28 @@ ul.related-pages {
 	display: flex;
 	flex-wrap: wrap;
 
+
 	li {
 		display: inline-block;
-		margin: $base__space-unit;
+		margin: 0.2rem $base__space-unit;
 	}
 
+	li.loop-title {
+
+		width: 50%;
+		height: 20vh;
+		background: url(./images/arrow.png) no-repeat 0% 100%;
+
+		@include tablet-query {
+			width: 15%;
+			height: 17vh;
+
+		}
+	}
+
+	h2 {
+		font-weight: normal;
+	}
 	h3 {
 		text-transform: uppercase;
 		font-weight: normal;
