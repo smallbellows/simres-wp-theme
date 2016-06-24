@@ -48,12 +48,12 @@ get_header('blog'); ?>
 
           <div class="content">
 
-            <h2><?php echo $fields['presenter']; ?></h2>
+            <h3><?php echo $fields['presenter']; ?></h3>
             <?php echo $fields['long_description']; ?>
 
             <div class="logotext">
               <a href="<?php echo get_home_url(); ?>">
-                <h2>saturna<span class="featured">marine</span>research.ca</h2>
+                <h3>saturna<span class="featured">marine</span>research.ca</h3>
               </a>
               <p>SEA<strong>TALKS </strong>| Saturna Environmental Awareness Talks presented by Saturna Island Marine Research &amp; Education Society | <strong>SIMRES</strong></p>
             </div>
