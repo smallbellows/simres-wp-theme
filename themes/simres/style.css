@@ -798,7 +798,7 @@ ul.related {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .blog header.hero h1 {
+  .blog header.hero h2 {
     padding-left: 2rem;
     padding-bottom: 10rem; }
 
@@ -807,8 +807,8 @@ ul.related {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-direction: row;
       flex-direction: row;
   padding: 1.5em; }

@@ -49,7 +49,7 @@
 	<aside <?php post_class(); ?>>
 	  <?php $images = CFS()->get('sidebar_images');
 	      foreach( $images as $image): ?>
-	      <img src="<?php esc_url( echo $image['picture'] ); ?>" alt="" />
+	      <img src="<?php echo esc_url( $image['picture'] ); ?>" alt="" />
 	    <?php endforeach; ?>
 	</aside>
 </section>

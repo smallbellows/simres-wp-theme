@@ -10,7 +10,7 @@
 
 get_header('blog'); ?>
 <header class="hero">
-	<h1>SIMRES News</h1>
+	<h2>SIMRES News</h2>
 </header>
 
 	<div id="primary" class="content-area">
