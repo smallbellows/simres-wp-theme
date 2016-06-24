@@ -89,8 +89,8 @@ add_action( 'after_setup_theme', 'simres_content_width', 0 );
  */
 function simres_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'simres' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Footer', 'simres' ),
+		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Add widgets here.', 'simres' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
