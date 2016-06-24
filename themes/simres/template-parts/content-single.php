@@ -38,7 +38,7 @@
 	    <?php $links = CFS()->get('related_links');
 	      foreach( $links as $link ): ?>
 	      <li>
-	        <?php echo $link['link']; ?>
+	        <?php echo wp_kses_post( $link['link'] ); ?>
 	      </li>
 	    <?php endforeach;?>
 	  </ul>
@@ -49,7 +49,7 @@
 	<aside <?php post_class(); ?>>
 	  <?php $images = CFS()->get('sidebar_images');
 	      foreach( $images as $image): ?>
-	      <img src="<?php echo $image['picture']; ?>" alt="" />
+	      <img src="<?php esc_url( echo $image['picture'] ); ?>" alt="" />
 	    <?php endforeach; ?>
 	</aside>
 </section>

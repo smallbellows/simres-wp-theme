@@ -22,7 +22,7 @@ get_header(); ?>
 				<ul class="slideshow">
 					<?php $slides = CFS()->get('images');
 								foreach($slides as $slide):?>
-							<li><img src="<?php echo $slide['slide']; ?>" alt="" /></li>
+							<li><img src="<?php echo esc_url( $slide['slide'] ); ?>" alt="" /></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
@@ -30,7 +30,7 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title parent-page">', '</h1>' ); ?>
+          <?php the_title( '<h2 class="entry-title parent-page">', '</h2>' ); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -41,7 +41,7 @@ get_header(); ?>
 							<ul class="related">
 								 <?php $related_links = CFS()->get('links');
 								 	foreach($related_links as $link): ?>
-									<li><?php echo $link['link']; ?></li>
+									<li><?php echo wp_kses_post( $link['link'] ); ?></li>
 								<?php endforeach;?>
 							</ul>
 						<?php endif; ?>
@@ -62,7 +62,7 @@ get_header(); ?>
 							<?php if(has_post_thumbnail($page->ID)): ?>
 								<a href="<?php echo get_permalink($page->ID) ?>">
 									<?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
-									<h3><?php echo $page->post_title ?></h3>
+									<h3><?php echo wp_kses_post( $page->post_title ); ?></h3>
 								</a>
 							<?php endif; ?>
 						</li>

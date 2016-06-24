@@ -20,14 +20,14 @@ get_header('blog'); ?>
           <?php if (!empty($fields['header_image'])): ?>
             <img src="<?php echo $fields['header_image'] ?>" alt="" />
           <?php endif; ?>
-          <h1 class="screen-reader-text"><?php echo the_title() ?></h1>
+          <h2 class="screen-reader-text"><?php echo the_title() ?></h2>
         </header>
         <div class="seatalk-content">
 
           <div class="meta">
-            <h1><?php echo the_title(); ?></h1>
-            <h2><?php echo $fields['subtitle']; ?></h2>
-            <h3 class="featured">Saturna Island, BC</h3>
+            <h2><?php echo the_title(); ?></h2>
+            <h3><?php echo $fields['subtitle']; ?></h3>
+            <h4 class="featured">Saturna Island, BC</h4>
 
             <h4><?php echo the_date(); ?> <?php echo $fields['time']; ?></h4>
 
@@ -60,8 +60,8 @@ get_header('blog'); ?>
       </div>
 
 
-          </div>
-        </div>
+    </div>
+
 
 
 
@@ -74,5 +74,4 @@ get_header('blog'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_footer();
+<?php get_footer();

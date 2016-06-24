@@ -25,7 +25,7 @@ get_header(); ?>
 			<ul class="slideshow">
 				<?php $slides = CFS()->get('images');
 							foreach($slides as $slide):?>
-						<li><img src="<?php echo $slide['slide']; ?>" alt="" /></li>
+						<li><img src="<?php echo esc_url( $slide['slide'] ); ?>" alt="" /></li>
 				<?php endforeach; ?>
 			</ul>
 		<?php endif; ?>

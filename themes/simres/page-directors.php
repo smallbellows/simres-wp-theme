@@ -22,7 +22,7 @@ get_header(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -47,10 +47,10 @@ get_header(); ?>
 
                          <div class="director-photo">
                            <a class="lightbox" href="#<?php echo the_id(); ?>">
-                             <img src="<?php echo CFS()->get('primary_photo'); ?>" alt="<?php the_title(); ?>" />
+                             <img src="<?php echo esc_url( CFS()->get('primary_photo') ); ?>" alt="<?php esc_attr( the_title() ); ?>" />
                            </a>
                            <div class="lightbox-target" id="<?php echo the_id(); ?>">
-                             <img src="<?php echo CFS()->get('secondary_photo'); ?>" alt="<?php the_title(); ?>" />
+                             <img src="<?php echo esc_url( CFS()->get('secondary_photo') ); ?>" alt="<?php esc_attr( the_title() ); ?>" />
                              <div class="caption">
                                <?php the_title('<h2>', '</h2>') ?>
                                <?php the_content(); ?>

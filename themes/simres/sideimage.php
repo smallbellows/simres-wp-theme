@@ -20,7 +20,7 @@ get_header(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -31,7 +31,7 @@ get_header(); ?>
 							<ul class="related">
 								 <?php $related_links = CFS()->get('links');
 								 	foreach($related_links as $link): ?>
-									<li><?php echo $link['link']; ?></li>
+									<li><?php echo wp_kses_post( $link['link'] ); ?></li>
 								<?php endforeach;?>
 							</ul>
 						<?php endif; ?>
