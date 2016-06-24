@@ -9,17 +9,15 @@
 
 get_header(); ?>
 
+	<div class="side-area">
+		<h2 class="screen-reader-text"><?php the_archive_title(); ?></h2>
+	</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?>
-			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
@@ -32,10 +30,10 @@ get_header(); ?>
 						<h4> <?php echo date('F j, Y', strtotime(CFS()->get('seatalk_date'))); ?>
 							<?php if (!empty($fields['header_image'])): ?>
 								<?php
-									the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+									the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 								?>
 							<?php else: ?>
-								<?php the_title( '<h2 class="entry-title">', '</h2>'); ?>
+								<?php the_title( '<h3 class="entry-title">', '</h3>'); ?>
 							<?php endif; ?>
 
 					</header><!-- .entry-header -->
@@ -45,30 +43,30 @@ get_header(); ?>
 
 
 							<?php if(!empty( $fields['presenter'] )): ?>
-								<p> <?php echo $fields['presenter'] ?>
+								<?php echo wp_kses_post( $fields['presenter'] ); ?>
 							<?php endif; ?>
 
 							<?php if(!empty( $fields['description'] )): ?>
-								<p> <?php echo $fields['description'] ?>
+								<?php echo wp_kses_post( $fields['description'] ); ?>
 							<?php endif; ?>
 
 							<p>
 							<?php if(!empty($fields['time'])): ?>
 
-								<span class="time"> <?php echo $fields['time']; ?> </span>
+								<span class="time"> <?php echo wp_kses_post( $fields['time'] ); ?> </span>
 
 							<?php endif; ?>
 							<?php if(!empty($fields['location'])): ?>
 
-								<span class="location"> <?php echo $fields['location']; ?> </span>
+								<span class="location"> <?php echo wp_kses_post( $fields['location'] ); ?> </span>
 
 							<?php endif; ?>
 							<?php if(!empty($fields['price'])): ?>
 
-								<span class="price"> <?php echo $fields['price']; ?> </span>
+								<span class="price"> <?php echo wp_kses_post( $fields['price'] ); ?> </span>
 
 							<?php endif; ?>
-
+						</p>
 
 					</div><!-- .entry-content -->
 

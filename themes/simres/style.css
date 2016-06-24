@@ -810,6 +810,51 @@ ul.related {
   width: 225px;
   overflow: hidden; }
 
+.post-type-archive-seatalk .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media screen and (min-width: 660px) {
+    .post-type-archive-seatalk .site-content {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+
+.post-type-archive-seatalk .side-area {
+  width: 100%;
+  height: 25vh;
+  background: url(./images/seatalks-small-header.png) no-repeat center center;
+  background-size: cover; }
+  @media screen and (min-width: 660px) {
+    .post-type-archive-seatalk .side-area {
+      width: 40%;
+      height: auto;
+      background: url(./images/seatalks-archive.png) no-repeat top center;
+      background-size: contain; } }
+
+.post-type-archive-seatalk .content-area {
+  width: 100%;
+  padding: 1.5em; }
+  @media screen and (min-width: 660px) {
+    .post-type-archive-seatalk .content-area {
+      width: 60%; } }
+  .post-type-archive-seatalk .content-area a {
+    text-decoration: underline; }
+  .post-type-archive-seatalk .content-area h2 {
+    text-align: right; }
+  .post-type-archive-seatalk .content-area h3, .post-type-archive-seatalk .content-area h4 {
+    margin-bottom: 0;
+    margin-top: 0.5rem; }
+  .post-type-archive-seatalk .content-area h3 {
+    font-weight: normal;
+    text-transform: uppercase; }
+  .post-type-archive-seatalk .content-area p {
+    margin-top: 0; }
+  .post-type-archive-seatalk .content-area .entry-content {
+    margin: 0.5rem 0 0; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
