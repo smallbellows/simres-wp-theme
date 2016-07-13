@@ -22,7 +22,6 @@ access_log
 !.gitignore
 !plugins/
 !themes/
-!uploads/
 !README.md
 !gulpfile.js
 

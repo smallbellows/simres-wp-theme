@@ -33,9 +33,8 @@ get_header(); ?>
 
         <!-- custom loop of seatalks -->
 			<section>
-
+				<h2 class="loop-title" >SIMRES Events</h2>
 			<ul class="related-pages">
-				<li class="loop-title"><h2>SIMRES Events</h2></li>
 				<?php
 					$args = array('post_type' => 'seatalk',
 												'order' => 'DESC',
@@ -57,8 +56,8 @@ get_header(); ?>
         <!-- custom loop of news posts -->
 
 				<section>
+					<h2 class="loop-title">SIMRES News</h2>
 					<ul class="related-pages">
-						<li class="loop-title"><h2>SIMRES News</h2></li>
 						<?php
 							$args = array('post_type' => 'post',
 														'order' => 'DESC',

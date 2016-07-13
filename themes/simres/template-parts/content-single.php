@@ -35,12 +35,14 @@
 
 		<?php if(CFS()->get('related_links')): ?>
 	  <ul class="related">
-	    <?php $links = CFS()->get('related_links');
-	      foreach( $links as $link ): ?>
-	      <li>
-	        <?php echo wp_kses_post( $link['link'] ); ?>
-	      </li>
-	    <?php endforeach;?>
+
+		    <?php $links = CFS()->get('related_links');
+				if ( $links ):
+		      foreach( $links as $link ): ?>
+		      <li>
+		        <?php echo wp_kses_post( $link['link'] ); ?>
+		      </li>
+	    <?php  endforeach; endif;?>
 	  </ul>
 	<?php endif; ?>
 
@@ -48,8 +50,9 @@
 
 	<aside <?php post_class(); ?>>
 	  <?php $images = CFS()->get('sidebar_images');
+			if ( $images ):
 	      foreach( $images as $image): ?>
 	      <img src="<?php echo esc_url( $image['picture'] ); ?>" alt="" />
-	    <?php endforeach; ?>
+	    <?php  endforeach; endif;?>
 	</aside>
 </section>

@@ -108,19 +108,17 @@ ul.related-pages {
 
 	li.loop-title {
 
-		width: 50%;
-		height: 20vh;
-		background: url(./images/arrow.png) no-repeat 0% 100%;
+	width: 15%;
+	}
+	.loop-title::after {
+		content: url(./images/arrow.png);
+		text-align: center;
 
-		@include tablet-query {
-			width: 15%;
-			height: 17vh;
-
-		}
 	}
 
 	h2 {
 		font-weight: normal;
+		@include font-size(1.2);
 	}
 	h3 {
 		text-transform: uppercase;
