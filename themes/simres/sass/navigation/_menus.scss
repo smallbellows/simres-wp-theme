@@ -10,6 +10,23 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+
+		ul {
+			position: absolute;
+			left: -999em;
+			z-index: 99999;
+			display: flex;
+			flex-direction: row;
+			width: auto;
+			background: white;
+			box-shadow: 0px 10px 16px -3px #898989;
+
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
 	}
 
 	li {
@@ -41,35 +58,6 @@
 	}
 }
 
-.main-navigation {
-
-  // @include desktop-query {
-	//
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   z-index: 2;
-  //   width: 20%;
-	// 	height: 100%;
-	//
-	// div {
-	// 	height: 100%;
-	// }
-  //   ul {
-  //     padding-top: 1rem;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: flex-end;
-	// 		height: 100%;
-	// 		padding-bottom: 1.5rem;
-  //   }
-	//
-  //   li {
-  //     flex-basis: auto;
-	//
-  //   }
-  // }
-}
 
 .comment-navigation,
 .posts-navigation,

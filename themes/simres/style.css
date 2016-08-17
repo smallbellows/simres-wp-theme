@@ -531,6 +531,20 @@ ul.related {
     list-style: none;
     margin: 0;
     padding-left: 0; }
+    .main-navigation ul ul {
+      position: absolute;
+      left: -999em;
+      z-index: 99999;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      width: auto;
+      background: white;
+      box-shadow: 0px 10px 16px -3px #898989; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
   .main-navigation li {
     -ms-flex: 0 1 100px;
         flex: 0 1 100px;
