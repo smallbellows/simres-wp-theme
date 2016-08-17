@@ -520,7 +520,8 @@ ul.related {
 --------------------------------------------------------------*/
 .main-navigation {
   display: block;
-  width: 100%; }
+  width: 100%;
+  text-transform: lowercase; }
   .main-navigation ul {
     display: -ms-flexbox;
     display: flex;
