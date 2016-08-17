@@ -37,24 +37,43 @@ get_header(); ?>
 						<?php endif; ?>
         </div><!-- .entry-content -->
 
-        <footer class="entry-footer">
-          <?php
-            edit_post_link(
-              sprintf(
-                /* translators: %s: Name of current post */
-                esc_html__( 'Edit %s', 'simres' ),
-                the_title( '<span class="screen-reader-text">"', '"</span>', false )
-              ),
-              '<span class="edit-link">',
-              '</span>'
-            );
-          ?>
-        </footer><!-- .entry-footer -->
+
       </article><!-- #post-## -->
 
       <div class="side-image">
         <?php the_post_thumbnail( 'large' ); ?>
+
+				<footer class="entry-footer">
+					<?php
+
+						if(CFS()->get('related_news')): ?>
+						<div class="related-news">
+							<h4>Recent SIMRES News about <?php the_title(); ?></h4>
+							<?php
+								$news_category = CFS()->get('related_news');
+								foreach ($news_category as $key => $label) {
+									$news_category = $label;
+								}
+
+								$args = array(
+									'category' => $news_category,
+									'posts_per_page' => 2
+								);
+								$posts_array = get_posts( $args);
+								foreach( $posts_array as $post ): setup_postdata($post);
+								?>
+								<p>
+									<a href="<?php the_permalink();  ?>"><?php the_title(); ?></a>
+								</p>
+
+							<?php endforeach; wp_reset_postdata(); ?>
+						</div>
+					<?php endif; ?>
+
+
+				</footer><!-- .entry-footer -->
       </div>
+
 
 
 			<?php endwhile; // End of the loop.
