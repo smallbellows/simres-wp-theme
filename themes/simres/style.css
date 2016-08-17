@@ -708,6 +708,13 @@ ul.related {
 .home section {
   margin: 1.5em; }
 
+.entry-content.homepage {
+  width: 80%;
+  margin: 1.5em auto; }
+  .entry-content.homepage p {
+    font-size: 19.2px;
+    font-size: 1.2rem; }
+
 .blog-header {
   background: #565656;
   height: 25vh;

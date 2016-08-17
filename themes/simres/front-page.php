@@ -29,6 +29,10 @@ get_header(); ?>
 				<?php endforeach; ?>
 			</ul>
 		<?php endif; ?>
+		<div class="entry-content homepage">
+			<?php the_content(); ?>
+		</div>
+
 	<?php endwhile; wp_reset_postdata();?>
 
         <!-- custom loop of seatalks -->

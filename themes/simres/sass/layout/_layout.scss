@@ -46,6 +46,15 @@
   margin: $base__space-unit;
 }
 
+.entry-content.homepage {
+  width: 80%;
+  margin: $base__space-unit auto;
+
+  p {
+    @include font-size(1.2);
+  }
+}
+
 // Small Header for Blog Pages
 
 .blog-header {
