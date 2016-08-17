@@ -246,7 +246,7 @@ input,
 button,
 select,
 textarea {
-  color: #5C5C5C;
+  color: #636463;
   font-family: "Gotham", Geneva, sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -484,12 +484,12 @@ span.required {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #161616;
+  color: #377d74;
   text-decoration: none; }
   a:visited {
-    color: #424242; }
+    color: #377d74; }
   a:hover, a:focus, a:active {
-    color: #969696; }
+    color: #84C9C0; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -537,10 +537,19 @@ ul.related {
     padding: 0.5rem 1.5em;
     position: relative;
     text-align: center; }
+    .main-navigation li:hover > a,
+    .main-navigation li.focus > a {
+      border-bottom: 2px solid #84C9C0; }
   .main-navigation a {
+    color: #636463;
     font-weight: bold;
     display: block;
     text-decoration: none; }
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .current-menu-ancestor > a {
+    border-bottom: 2px solid #84C9C0; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -666,16 +675,14 @@ ul.related {
   -ms-flex-pack: center;
       justify-content: center;
   padding: 1.5em; }
-  @media screen and (min-width: 970px) {
-    .site-header {
-      position: relative;
-      height: 305px; } }
 
 .site-branding {
+  display: block;
   height: 20vh;
   width: 100%;
   background: url("../simres/images/simres-logo-new.svg") no-repeat center center;
-  background-size: contain; }
+  background-size: contain;
+  margin-bottom: 1.5em; }
 
 .hentry:not(.seatalk) {
   padding: 1.5em; }
@@ -730,8 +737,8 @@ ul.related {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       width: 100%;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       padding-left: 0;
       margin-left: 0;
       list-style: none; }
@@ -745,8 +752,8 @@ ul.related {
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center; }
+    -ms-flex-align: start;
+        align-items: flex-start; }
   .page-template-two-column .left-column, .page-template-two-column .right-column {
     width: 50%; } }
 
@@ -956,7 +963,10 @@ ul.related-pages {
     font-weight: normal;
     font-size: 16px;
     font-size: 1rem;
-    max-width: 150px; }
+    max-width: 150px;
+    margin-bottom: 0; }
+  ul.related-pages p {
+    margin-top: 0; }
 
 .directors {
   display: -ms-flexbox;

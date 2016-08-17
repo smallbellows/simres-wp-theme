@@ -125,5 +125,10 @@ ul.related-pages {
 		font-weight: normal;
 		@include font-size(1);
 		max-width: 150px;
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-top: 0;
 	}
 }

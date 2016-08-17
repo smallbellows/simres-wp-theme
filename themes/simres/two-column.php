@@ -18,15 +18,23 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post(); ?>
-
+			<?php if(CFS()->get('images')): ?>
+				<ul class="slideshow">
+					<?php $slides = CFS()->get('images');
+								foreach($slides as $slide):?>
+							<li><img src="<?php echo esc_url( $slide['slide'] ); ?>" alt="" /></li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        </header><!-- .entry-header -->
+        <!-- .entry-header -->
 
         <div class="entry-content">
 
           <div class="left-column">
+						<header class="entry-header">
+		          <?php the_title( '<h2 class="entry-title parent-page">', '</h2>' ); ?>
+		        </header>
             <?php echo CFS()->get( 'left_side' ); ?>
           </div>
 

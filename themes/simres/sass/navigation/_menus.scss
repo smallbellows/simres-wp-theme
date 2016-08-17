@@ -20,10 +20,13 @@
 
 		&:hover > a,
 		&.focus > a {
+
+			border-bottom: 2px solid $color__brand;
 		}
 	}
 
 	a {
+		color: $color__text-main;
 		font-weight: bold;
 		display: block;
 		text-decoration: none;
@@ -33,6 +36,8 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+
+		border-bottom: 2px solid $color__brand;
 	}
 }
 

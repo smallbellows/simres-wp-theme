@@ -7,13 +7,14 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__background-blog: #565656;
 
+$color__brand: #84C9C0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #161616;
-$color__link-visited: #424242;
-$color__link-hover:  #969696;
-$color__text-main: #5C5C5C;
+$color__link: darken($color__brand, 30%);
+$color__link-visited: darken($color__brand, 30%);
+$color__link-hover:  $color__brand;
+$color__text-main: #636463;
 
 $color__small-nav: #ccc;
 
